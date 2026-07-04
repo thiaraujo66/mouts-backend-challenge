@@ -1,0 +1,8 @@
+services:
+  ambev.developerevaluation.webapi:
+    environment:
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=DevCert@2026!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/Ambev.DeveloperEvaluation.WebApi.pfx
+      - ConnectionStrings__DefaultConnection=Host=ambev.developerevaluation.database;Port=5432;Database=developer_evaluation;Username=developer;Password=ev@luAt10n
+    depends_on:
+      - ambev.developerevaluation.database
